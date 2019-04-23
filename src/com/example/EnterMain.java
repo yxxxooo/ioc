@@ -1,14 +1,16 @@
 package com.example;
 
 import com.example.ioc.ApplicationContext;
-import com.example.service.UserService;
-import com.example.service.UserServiceImpl;
+import com.example.service.PersonService;
+import com.example.service.PersonServiceImpl;
 
 public class EnterMain {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         ApplicationContext ctx = new ApplicationContext(EnterMain.class);
-        UserService userService = ctx.getBean(UserServiceImpl.class);
-        userService.send();
+        PersonService personService = ctx.getBean(PersonServiceImpl.class);
+        personService.execute();
+
+
     }
 }

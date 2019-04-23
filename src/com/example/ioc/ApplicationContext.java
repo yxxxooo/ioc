@@ -60,6 +60,6 @@ public class ApplicationContext {
     }
 
     public Object getBean(String clz){
-        return beanFatory.getBeanMap().get(clz);
+        return beanFatory.getBeanMap(clz);
     }
 }
